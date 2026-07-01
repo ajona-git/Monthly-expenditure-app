@@ -60,3 +60,51 @@ body{
   align-items:center;
   gap:.5rem;
 }
+.main-content{
+  padding:2rem;
+  max-width:1400px;
+  margin: 0 auto;
+}
+.dashboard-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr 350px;
+  gap:rem;
+  margin-bottom:2rem;
+}
+.card{
+  background: white;
+  border-radius:12px;
+  padding:1.5rem;
+  box-shadow:0 1px 3px rgba(0,0,0,0.1);
+}
+.card-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:1rem;
+}
+.card-title{
+  font-size:1rem;
+  font-weight:600;
+  color:#374151;
+}
+.card-menu{
+  background:none;
+  border:none;
+  color:#9ca3af;
+  cursor:pointer;
+  padding:.25rem;
+
+}
+.amount{
+  font-size:2rem;
+  font-weight:700;
+  margin-bottom:.5rem;
+}
+.change{
+  font-size:.875rem;
+  color:rgb(44, 197, 44);
+  display:flex;
+  align-items:center;
+  gap:.25rem;
+}
