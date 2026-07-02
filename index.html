@@ -278,6 +278,102 @@
       </button>
     </div>
 
+    <!--income model-->
+    <div id="incomemodel" class="model">
+      <div class="model-content">
+        <div class="model-header">
+          <h2 class="model-title">Add income</h2>
+          <button class="close-button" onclick="closeModel('incomeModel')">
+            &times;
+          </button>
+        </div>
+        <div class="model-body">
+          <form id="incomeForm">
+            <div class="form-group">
+              <label class="form-label">Amount</label>
+              <input
+                type="number"
+                class="form-input"
+                id="incomeAmount"
+                placeholder="Enter Amount"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Category</label>
+              <select class="form-select" id="income-category" required>
+                <option value="">Select Category</option>
+                <option value="salary">Salary</option>
+                <option value="freelance">Freelance</option>
+                <option value="business">Business</option>
+                <option value="investment">Investment</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Description</label>
+              <input type="text" class="form-input" id="incomeDescription" placeholder="Enter Description" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Date</label>
+              <input type="date" class="form-input" id="incomeDate" required />
+            </div>
+          </form>
+        </div>
+        <div class="model-footer">
+          <button class="btn btn-secondary" onclick="closeModel('incomeModel')">Cancel</button>
+          <button class="btn btn-primary" onclick="addIncome()">Add Income</button>
+        </div>
+      </div>
+    </div>
+    <div id="expensemodel" class="model">
+      <div class="model-content">
+        <div class="model-header">
+          <h2 class="model-title">Add expense</h2>
+          <button class="close-button" onclick="closeModel('expenseModel')">
+            &times;
+          </button>
+        </div>
+        <div class="model-body">
+          <form id="expenseForm">
+            <div class="form-group">
+              <label class="form-label">Amount</label>
+              <input
+                type="number"
+                class="form-input"
+                id="expenseAmount"
+                placeholder="Enter Amount"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Category</label>
+              <select class="form-select" id="expense-category" required>
+                <option value="">Select Category</option>
+                <option value="food">Food</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="shopping">Shopping</option>
+                <option value="transport">Transport</option>
+                <option value="utilities">Utilities</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Description</label>
+              <input type="text" class="form-input" id="expenseDescription" placeholder="Enter Description" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Date</label>
+              <input type="date" class="form-input" id="expenseDate" required />
+            </div>
+          </form>
+        </div>
+        <div class="model-footer">
+          <button class="btn btn-secondary" onclick="closeModel('expenseModel')">Cancel</button>
+          <button class="btn btn-primary" onclick="addExpense()">Add Expenses</button>
+        </div>
+      </div>
+    </div>
     <script src="./scripts/script.js"></script>
     <script
       src="https://kit.fontawesome.com/920bbfd7b4.js"
