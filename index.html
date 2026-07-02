@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal expense tracker</title>
     <link rel="stylesheet" href="./styles/style.css" />
-    <link
-    />
+    <link />
   </head>
   <body>
     <div class="header">
       <h1>Good Morning ajona</h1>
       <div class="header-controls">
-        <div class="dropdown">Daily <i class="fa-solid fa-chevron-down"></i></div>
+        <div class="dropdown">
+          Daily <i class="fa-solid fa-chevron-down"></i>
+        </div>
         <div class="date-picker">
           <i class="fa-solid fa-calender"></i>
           19 june 2026
@@ -116,6 +117,7 @@
             <div class="chart-bar" style="height:80px"></div>
             <div class="chart-bar" style="height:140px"></div>
             <div class="chart-bar" style="height:90px"></div>
+            <div class="chart-bar" style="height:90px"></div>
           </div>
           <div class="chart-labels">
             <span>Feb</span>
@@ -132,10 +134,74 @@
             <span>Jan</span>
           </div>
         </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">All Expenses</h3>
+            <button class="card-menu"><i class="fas fa-ellipses"></i></button>
+          </div>
+          <div style="font-size:.75rem; color:#6b7280; margin-bottom: 1rem;">
+            Spending breakdown by category
+          </div>
+          <div class="expenses-breakdown">
+            <div class="total-expenses">$7565.99</div>
+            <div class="period-tabs">
+              <span class="period-tab">Daily</span>
+              <span class="period-tab">Weekly</span>
+              <span class="period-tab active">Monthly</span>
+            </div>
+            <div class="period-amounts">
+              <span>Daily</span>
+              <span>Weekly</span>
+              <span>Monthly</span>
+            </div>
+            <div class="period-values">
+              <span>$765</span>
+              <span>$6556</span>
+              <span>$7679</span>
+            </div>
+            <div class="color-bar"></div>
+            <div class="expense-categories">
+              <ul class="expense-categories">
+                <li class="expense-category">
+                  <div class="category-info">
+                    <div class="category-dot dot-food"></div>
+                    <span>Food & Health</span>
+                  </div>
+                  <span>$654</span>
+                </li>
+                <li class="expense-category">
+                  <div class="category-info">
+                    <div class="category-dot dot-entertainment"></div>
+                    <span>Entertainment</span>
+                  </div>
+                  <span>$74</span>
+                </li>
+                <li class="expense-category">
+                  <div class="category-info">
+                    <div class="category-dot dot-investment"></div>
+                    <span>Investments</span>
+                  </div>
+                  <span>$654</span>
+                </li>
+                <li class="expense-category">
+                  <div class="category-info">
+                    <div class="category-dot dot-shopping"></div>
+                    <span>Shopping</span>
+                  </div>
+                  <span>$654</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <script src="./scripts/script.js"></script>
-    <script src="https://kit.fontawesome.com/920bbfd7b4.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/920bbfd7b4.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
