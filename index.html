@@ -31,7 +31,7 @@
             <h1 class="card-title">Monthly Income</h1>
             <button class="card-menu"><i class="fa-solid fa-ellipsis"></i></button>
           </div>
-          <div class="amount income-amount">$,2876.00</div>
+          <div class="amount income-amount">$2,2876.00</div>
           <div class="change">
             <i class="fas fa-arrow-up"></i
             ><!-- percentage increase or decrease -->
@@ -43,7 +43,7 @@
             <h1 class="card-title">Monthly Expenses</h1>
             <button class="card-menu"><i class="fa-solid fa-ellipsis"></i></button>
           </div>
-          <div class="amount income-amount">$1,176.00</div>
+          <div class="amount expense-amount">$1,176.00</div>
           <div class="change">
             <i class="fas fa-arrow-up"></i
             ><!-- percentage increase or decrease -->
@@ -210,7 +210,7 @@
             </button>
           </div>
         </div>
-        <table class="transaction-table">
+        <table class="transactions-table">
           <thead>
             <tr>
               <th>Date <i class="fa-solid fa-sort"></i></th>
@@ -271,7 +271,7 @@
 
       <button
         class="fab-btn fab-expense"
-        onclick="openexpenseModel()"
+        onclick="openExpenseModel()"
         title="Add expense"
       >
         <i class="fa-solid fa-minus"></i>
@@ -279,11 +279,11 @@
     </div>
 
     <!--income model-->
-    <div id="incomemodel" class="model">
+    <div id="incomeModel" class="model">
       <div class="model-content">
         <div class="model-header">
           <h2 class="model-title">Add income</h2>
-          <button class="close-button" onclick="closeModel('incomeModel')">
+          <button class="close-btn" onclick="closeModel('incomeModel')">
             &times;
           </button>
         </div>
@@ -301,7 +301,7 @@
             </div>
             <div class="form-group">
               <label class="form-label">Category</label>
-              <select class="form-select" id="income-category" required>
+              <select class="form-select" id="incomeCategory" required>
                 <option value="">Select Category</option>
                 <option value="salary">Salary</option>
                 <option value="freelance">Freelance</option>
@@ -326,10 +326,10 @@
         </div>
       </div>
     </div>
-    <div id="expensemodel" class="model">
+    <div id="expenseModel" class="model">
       <div class="model-content">
         <div class="model-header">
-          <h2 class="model-title">Add expense</h2>
+          <h2 class="model-title">Add Expense</h2>
           <button class="close-btn" onclick="closeModel('expenseModel')">
             &times;
           </button>
@@ -360,7 +360,7 @@
             </div>
             <div class="form-group">
               <label class="form-label">Description</label>
-              <input type="text" class="form-input" id="expenseDescription" placeholder="Enter Description" />
+              <input type="text" class="form-input" id="expenseDescription" placeholder="Enter description" />
             </div>
             <div class="form-group">
               <label class="form-label">Date</label>
