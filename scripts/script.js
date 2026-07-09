@@ -106,7 +106,7 @@ function updateDashboard() {
   document.querySelector(".expense-amount").textContent =
     `${monthlyExpenses.toLocaleString()}.00`;
 
-  let spendingLimit = 67678;
+  let spendingLimit = 0;
   const usedAmount = monthlyExpenses;
   const percentage = (usedAmount / spendingLimit) * 100;
   document.querySelector(".spending-limit").textContent =
