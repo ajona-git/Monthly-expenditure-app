@@ -339,12 +339,12 @@ body {
   align-items: center;
   gap: 0.5rem;
 }
-.transaction-table {
+.transactions-table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 1rem;
 }
-.transaction-table th {
+.transactions-table th {
   text-align: left;
   padding: 1rem;
   font-size: 0.875rem;
@@ -352,9 +352,10 @@ body {
   color: #6b7280;
   border-bottom: 1px solid #e5e7be;
 }
-.transaction-table td {
+.transactions-table td {
   padding: 1rem;
   border-bottom: 1px solid #f3f4f6;
+  text-align: left;
 }
 .status-success {
   background: #dcfce7;
@@ -416,7 +417,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -50%);
   animation: slideIn 0.3s ease;
 }
 .model-header {
@@ -522,4 +523,7 @@ body {
   .main-content{
     padding:1rem;
   }
+}
+table{
+  justify-content: space-between;
 }

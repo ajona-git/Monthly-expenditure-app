@@ -1,9 +1,7 @@
-let transactions = [
+let transactions = [];
 
-];
-
-let monthlyIncome = 22876;
-let monthlyExpenses = 786487;
+let monthlyIncome = 0;
+let monthlyExpenses = 0;
 
 const today = new Date().toISOString().split("T")[0];
 console.log(today);
@@ -57,7 +55,7 @@ function addIncome() {
   const newTransaction = {
     id: transactions.length + 1,
     date: date,
-    category: category.charAt(0).toUpperCase + category.slice(1),
+    category: category.charAt(0).toUpperCase() + category.slice(1),
     amount: amount,
     status: "success",
     type: "income",
@@ -86,19 +84,19 @@ function addExpense() {
   const newTransaction = {
     id: transactions.length + 1,
     date: date,
-    category: category.chartAt(0).toUpperCase + category.slice(1),
+    category: category.charAt(0).toUpperCase() + category.slice(1),
     amount: -amount,
     status: "success",
     type: "expense",
     description: "desctription",
   };
-  transactions.unShift(newTransaction);
+  transactions.unshift(newTransaction);
 
   monthlyExpenses += amount;
   updateDashboard();
   updateTransactionsTable();
 
-  closeModel("incomeModel");
+  closeModel("expenseModel");
   showNotification("income added successfully", "success");
 }
 
@@ -132,16 +130,17 @@ function updateTransactionsTable() {
         year: "numeric",
       },
     );
+
     const amountDisplay =
-      transaction > 0
-        ? "+${transaction.amount.toLocaleString()}.00"
-        : `-${Math.abs(transaction.amount).toLocaleString()}.00`;
+      transaction.amount > 0
+        ? `+$${transaction.amount.toLocaleString()}.00`
+        : `-$${Math.abs(transaction.amount).toLocaleString()}.00`;
 
     row.innerHTML = `
     <tr>
               <td>${formattedDate}</td>
               <td>${transaction.category}</td>
-              <td style="color: ${transaction.amount > 0 ? '#10b981' : '#ef4444' }">${amountDisplay}</td>
+              <td style="color: ${transaction.amount > 0 ? "#10b981" : "#ef4444"}">${amountDisplay}</td>
               <td><span class="status-success">${transaction.status}</span></td>
               <td>
                 <button class="action-btn">
@@ -150,12 +149,12 @@ function updateTransactionsTable() {
               </td>
             </tr>
     `;
-    tbody.appendChild(row)
+    tbody.appendChild(row);
   });
 }
 
-function showNotification(message, type = 'success'){
-  const  notification = document.createElement('div')
+function showNotification(message, type = "success") {
+  const notification = document.createElement("div");
   notification.style.cssText = `
     position:fixed;
     top:2rem;
@@ -166,21 +165,21 @@ function showNotification(message, type = 'success'){
     box-shadow: 0 4px 12px rgba(0, 0, 0, .5);
     z-index:1001;
     animation:slideInRight .3s ease;
-    background: ${type === 'success' ? '#10b981' : '#ef4444'} ;
-  `
+    background: ${type === "success" ? "#10b981" : "#ef4444"} ;
+  `;
   notification.textContent = message;
   document.body.appendChild(notification);
 
-  setTimeout(()=>{
-    notification.style.animation = 'slideOutRight .3s ease'
-    setTimeout(()=>{
-      document.body.removeChild(notification)
-    }, 3000)
-  }, 3000)
+  setTimeout(() => {
+    notification.style.animation = "slideOutRight .3s ease";
+    setTimeout(() => {
+      document.body.removeChild(notification);
+    }, 3000);
+  }, 3000);
 }
 
-const style = document.createElement('style');
-style.textContent= `
+const style = document.createElement("style");
+style.textContent = `
   @keyframes slideInRight {
   from{transform:translateX(100%); opacity:0;}
   to{transform:translateX(0); opacity:1;}
@@ -190,8 +189,8 @@ style.textContent= `
     to{transform:translateX(100%); opacity:0;}
   }
 
-`
+`;
 document.head.appendChild(style);
-document.addEventListener('DOMContentLoaded', function(){
-  updateTransactionsTable()
-})
+document.addEventListener("DOMContentLoaded", function () {
+  updateTransactionsTable();
+});
